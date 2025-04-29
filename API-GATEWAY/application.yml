@@ -41,6 +41,5 @@ spring:
               - SetRequestHeader=X-Request-Red, Blue
  
 
-
-jwt:
-  secret: ${JWT_SECRETS}
+  jwt:
+   secret: ${JWT_SECRETS}
