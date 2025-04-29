@@ -33,7 +33,7 @@ management:
     web:
       exposure:
         include: mapping,bus-refresh,bus-env,health,circuitbreakerevents
-  endpoints:
+  endpoint:
     health:
       show-details: always
   health:
