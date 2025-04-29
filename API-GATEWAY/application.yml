@@ -15,7 +15,7 @@ spring:
   application:
     name: API-GATEWAY
   config:
-    import: import: "optional:file:.env"
+    import: import: optional:file:.env[.properties]
   cloud:
     gateway:
         routes:
