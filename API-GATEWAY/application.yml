@@ -22,7 +22,7 @@ spring:
             filters:
               - Authentication
 
-          - id: weather-service
+          - id: WEATHER-SERVICE
             uri: lb://weather-service
             predicates:
               - Path=/weather/**
