@@ -38,4 +38,4 @@ spring:
             filters:
               - SetRequestHeader=X-Request-Red, Blue
 jwt:
-  secret: ${JWT_SECRETS}
+  secret: ${JWT_SECRET}
