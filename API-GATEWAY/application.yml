@@ -1,0 +1,36 @@
+server:
+  port: 8888
+
+spring:
+  cloud:
+    gateway:
+        routes:
+          - id: forecast-service
+            uri: lb://forecast-service
+            predicates:
+              - Path=/forecast/**
+            filters:
+              - Authentication
+
+          - id: weather-service
+            uri: lb://weather-service
+            predicates:
+              - Path=/weather/**
+            filters:
+              - Authentication
+
+          - id: identity-service
+            uri: lb://identity-service
+            predicates:
+              - Path=/auth/**
+            filters:
+              - SetRequestHeader=X-Request-Red, Blue
+
+  application:
+    name: api-gateway
+
+  config:
+    import: optional:file:.env[.properties]
+
+jwt:
+  secret: ${JWT_SECRETS}
