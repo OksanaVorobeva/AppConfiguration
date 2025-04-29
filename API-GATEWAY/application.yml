@@ -15,7 +15,7 @@ spring:
   cloud:
     gateway:
         routes:
-          - id: forecast-service
+          - id: FORECAST-SERVICE
             uri: lb://forecast-service
             predicates:
               - Path=/forecast/**
