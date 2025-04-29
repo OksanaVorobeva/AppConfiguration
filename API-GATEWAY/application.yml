@@ -39,8 +39,8 @@ spring:
   application:
     name: API-GATEWAY
 
-  config:
-    import: optional:file:.env[.properties]
+config:
+  import: optional:file:.env[.properties]
 
 jwt:
   secret: ${JWT_SECRETS}
