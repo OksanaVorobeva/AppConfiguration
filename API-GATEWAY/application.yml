@@ -37,7 +37,7 @@ spring:
               - SetRequestHeader=X-Request-Red, Blue
 
   application:
-    name: api-gateway
+    name: API-GATEWAY
 
   config:
     import: optional:file:.env[.properties]
