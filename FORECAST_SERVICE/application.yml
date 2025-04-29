@@ -1,6 +1,17 @@
 server:
-  port: 8082
-
+ port: 8082
+  
+eureka:
+  instance:
+    ip-address: 127.0.0.1  
+    hostname: localhost 
+    prefer-ip-address: true 
+  client:
+    service-url:
+      defaultZone: http://localhost:8761/eureka/
+    register-with-eureka: true
+    fetch-registry: true
+    
 spring:
   application:
     name: FORECAST-SERVICE
@@ -16,17 +27,8 @@ spring:
     database-platform: org.hibernate.dialect.H2Dialect
   flyway:
     enabled: true
+
     
-eureka:
-  instance:
-    ip-address: 127.0.0.1  
-    hostname: localhost 
-    prefer-ip-address: true 
-  client:
-    service-url:
-      defaultZone: http://localhost:8761/eureka/
-    register-with-eureka: true
-    fetch-registry: true
 
 
 
