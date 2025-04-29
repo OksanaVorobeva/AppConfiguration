@@ -33,7 +33,7 @@ spring:
             filters:
               - Authentication
 
-          - id: identity-service
+          - id: IDENTITY-SERVICE
             uri: lb://identity-service
             predicates:
               - Path=/auth/**
