@@ -1,0 +1,30 @@
+eureka:
+  instance:
+    ip-address: 127.0.0.1  
+    hostname: localhost 
+    prefer-ip-address: true 
+  client:
+    service-url:
+      defaultZone: http://localhost:8761/eureka/
+    register-with-eureka: true
+    fetch-registry: true
+
+    server:
+  port: 8081
+
+spring:
+  application:
+    name: WEATHER-SERVICE
+  datasource:
+    url: jdbc:h2:mem:weather_db
+    username: root
+    password: root
+    driver-class-name: org.h2.Driver
+  h2:
+    console:
+      enabled: true
+  jpa:
+    database-platform: org.hibernate.dialect.H2Dialect
+  flyway:
+    locations: classpath:db/migration
+    enabled: true
