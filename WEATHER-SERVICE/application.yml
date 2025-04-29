@@ -1,3 +1,6 @@
+server:
+ port: 8081
+  
 eureka:
   instance:
     ip-address: 127.0.0.1  
@@ -8,9 +11,6 @@ eureka:
       defaultZone: http://localhost:8761/eureka/
     register-with-eureka: true
     fetch-registry: true
-
-    server:
-  port: 8081
 
 spring:
   application:
