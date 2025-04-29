@@ -28,6 +28,18 @@ spring:
   flyway:
     enabled: true
 
+management:
+  endpoints:
+    web:
+      exposure:
+        include: mapping,bus-refresh,bus-env,health,circuitbreakerevents
+  endpoints:
+    health:
+      show-details: always
+  health:
+    circuitbreakers:
+      enabled: true
+      
 resilience4j:
   circuitbreaker:
     circuit-breaker-aspect-order: 1
