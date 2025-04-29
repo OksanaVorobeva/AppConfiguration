@@ -35,10 +35,9 @@ spring:
               - Path=/auth/**
             filters:
               - SetRequestHeader=X-Request-Red, Blue
-application:
-  name: API-GATEWAY
-config:
-  import: optional:file:.env[.properties]
+ application:
+   name: API-GATEWAY
+
 
 jwt:
   secret: ${JWT_SECRETS}
