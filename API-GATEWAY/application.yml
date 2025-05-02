@@ -21,21 +21,11 @@ spring:
             uri: lb://forecast-service
             predicates:
               - Path=/forecast/**
-            filters:
-              - Authentication
 
           - id: WEATHER-SERVICE
             uri: lb://weather-service
             predicates:
               - Path=/weather/**
-            filters:
-              - Authentication
 
-          - id: IDENTITY-SERVICE
-            uri: lb://identity-service
-            predicates:
-              - Path=/auth/**
-            filters:
-              - SetRequestHeader=X-Request-Red, Blue
 jwt:
   secret: ${JWT_SECRET}
