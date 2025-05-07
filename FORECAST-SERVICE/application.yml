@@ -27,7 +27,11 @@ spring:
     database-platform: org.hibernate.dialect.H2Dialect
   flyway:
     enabled: true
-
+  security:
+    oauth2:
+      resourceserver:
+        jwt:
+          jwk-set-uri: https://keycloak.javaguru.by/realms/ovorobyova_realm/protocol/openid-connect/certs
 management:
   endpoints:
     web:
